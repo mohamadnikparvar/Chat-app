@@ -8,7 +8,7 @@ const AuthContextProvider = ({children}) => {
 
     const [user,setUser] = useState(false)
     const [loading,setLoading] = useState(true)
-    const history = useHistory
+    const history = useHistory()
 
     useEffect(() => {
         auth.onAuthStateChanged(user => {

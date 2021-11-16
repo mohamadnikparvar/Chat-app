@@ -12,8 +12,9 @@ function App() {
     <div className="App">
       <AuthContextProvider>
       <Switch>
-        <Route to="/chats" component={Chats}/>
-        <exact Route to="/" component={Login}/>
+      
+      <Route path="/chats" component={Chats}/>
+      <Route path="/" component={Login}/>
       </Switch>
       </AuthContextProvider>
     </div>
