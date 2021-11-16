@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router";
 
 // components
 import Login from "./components/Login";
+import Chats from "./components/Chats";
 
 // context
 import AuthContextProvider from "./contexts/AuthContextProvider";
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       <AuthContextProvider>
       <Switch>
-        <Route to="/" component={Login}/>
+        <Route to="/chats" component={Chats}/>
+        <exact Route to="/" component={Login}/>
       </Switch>
       </AuthContextProvider>
     </div>

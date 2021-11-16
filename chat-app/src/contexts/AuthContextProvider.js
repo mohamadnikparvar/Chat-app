@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
 
-const AuthContext = createContext
+const AuthContext = createContext()
 
 const AuthContextProvider = ({children}) => {
 
@@ -19,9 +19,9 @@ const AuthContextProvider = ({children}) => {
     },[user,history])
 
     return (
-        <AuthContext.provider value={user}>
+        <AuthContext.Provider value={user}>
             {!loading && children}
-        </AuthContext.provider>
+        </AuthContext.Provider>
     );
 };
 
